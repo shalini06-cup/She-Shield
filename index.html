@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>SheShield</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="/">Home</a> |
+
+        <a href="/report">Report Incident</a> |
+
+        <a href="/contacts">Emergency Contacts</a> |
+
+        <a href="/tips">Safety Tips</a> |
+
+        <a href="/history">Report History</a>
+
+    </nav>
+
+
+    <h1>🛡️ SheShield</h1>
+
+    <h2>
+        Women's Safety & Public Safety Reporting System
+    </h2>
+
+    <p>
+
+        Welcome to SheShield.
+
+        This platform helps users report safety issues,
+        access emergency contacts,
+        and learn important safety tips.
+
+    </p>
+
+
+    <a href="/report">
+
+        <button>Report an Incident
+
+        </button>
+
+    </a>
+
+    <section class="hero">
+
+        <h1>Women Safety Portal</h1>
+
+        <p>
+             Fast emergency support and safety awareness platform
+        </p>
+
+    <!-- Alarm sound -->
+        <audio id="alarmSound">
+            <source src="{{ url_for('static', filename='alarm.mp3') }}" type="audio/mpeg">
+         </audio>
+
+    <!-- SOS Button -->
+        <button id="sosBtn">
+             Emergency SOS
+        </button>
+
+    <!-- Stop Alarm Button -->
+        <button onclick="stopAlarm()" 
+    class="alarm-btn">
+           Stop Alarm
+        </button>
+
+</section>
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h3>Emergency Help</h3>
+
+            <p>
+                Quick access to emergency support.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Live Location</h3>
+
+            <p>
+                Share current location instantly.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Safety Tips</h3>
+
+            <p>
+                Learn smart personal safety methods.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 SheShield - Women's Safety &
+            Public Safety Reporting System
+        </p>
+
+    </footer> 
+    <audio id="alarmSound" src="{{ url_for('static', filename='alarm.mp3') }}"></audio>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

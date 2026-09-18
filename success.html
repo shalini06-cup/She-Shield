@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Success</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <h1>Report Submitted Successfully</h1>
+
+<h2>✅ Thank You for Your Report!</h2>
+
+<p>
+    Your safety is our priority. We appreciate your contribution in helping create a safer community.
+</p>
+
+    <div class="success-box">
+
+        <p>
+            <strong>Location:</strong>
+            {{ location }}
+        </p>
+
+        <p>
+            <strong>Issue:</strong>
+            {{ issue }}
+        </p>
+
+        <p>
+            <strong>Date & Time:</strong>
+            {{ time }}
+        </p>
+
+    </div>
+
+    <a href="/">
+        <button>Back To Home</button>
+    </a>
+
+</body>
+
+</html>
